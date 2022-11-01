@@ -6,9 +6,10 @@
   "scripts": {
     "server" : "node server/src/index.js",
     "build-client": "cd client && npm install && npm run build && cd..",
-    "start": "npm run build-client && npm run server",
+    "deploy": "npm run build-client && npm run server",
     "dev:server" : "node --watch server/src/index.js",
-    "dev:client" : "cd client && npm run start"
+    "dev:client" : "cd client && npm run start",
+    "start" : "npm run server"
   },
   "repository": {
     "type": "git",
