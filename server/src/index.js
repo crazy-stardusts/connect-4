@@ -8,7 +8,7 @@ app.use(express.static(path.resolve(__dirname, '../../client/build')));
 app.get("/api", (req, res) => {
     res.status(200).json({
         status : "Success",
-        data : "Test"
+        data : "Test Messgae"
     })
 })
 
