@@ -19,7 +19,7 @@ async function x() {
     redisClient.set('x', 'y');
     console.log(await redisClient.get('x'));
 }
-
+// 
 
 connectRedis();
 x();
