@@ -28,10 +28,53 @@
   color: #61dafb;
 }
 
+.empty-slot {
+  fill: white;
+}
+
+.player1-slot {
+  fill: #18BC9C;
+}
+
+.player2-slot {
+  fill: #2C3E50;
+}
+
+table {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+  height: 20%;
+  border-radius: 30px;
+  overflow: hidden;
+  padding: 10px;
+  display: table;
+  border-collapse: separate;
+  box-sizing: border-box;
+  text-indent: initial;
+  border-spacing: 2px;
+  border-color: grey;
+  background-color: grey;
+  color: #000000de;
+}
+
+thead,
+tbody,
+tfoot,
+tr,
+td,
+th {
+  border-color: inherit;
+  border-style: solid;
+  border-width: 0;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }

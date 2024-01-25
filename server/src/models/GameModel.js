@@ -1,16 +1,19 @@
 class Game {
     constructor(obj) {
-        this.id = obj.id;
+        if(obj == null)
+        this.id = obj?.id || 1;
         this.playerFirst = obj.playerFirst;
         this.playerSecond = obj.playerSecond;
-        this.row = obj.row;
-        this.col = obj.col;
-        this.boardPosition = Array(obj.row)
+        this.row = obj?.row || 6;
+        this.col = obj?.col || 7;
+        this.boardPosition = obj?.boardPosition || Array(obj.row)
             .fill(0)
             .map(() => Array(obj.col).fill(0));
     }
 
-    updatePosition(row, col, playerIndex) {
+    updatePosition(col, playerIndex) {
+        let row = this.row - 1;
+        while(this.boardPosition[row][col] != 0 && row > 0) --row;
         if(row < 0 || row >= this.row || col < 0 || col >= this.col) {
             return "Error"
         }
